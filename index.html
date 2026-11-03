@@ -165,6 +165,22 @@ main{padding:0 var(--gutter)}
 .phones{list-style:none;margin:0 0 1.2em;padding:0;display:grid;gap:.4rem}
 .phones a{font-weight:500}
 
+
+/* Où dormir */
+.stays{grid-column:1/-1;display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fill,minmax(16rem,1fr));margin-top:1rem}
+@media (min-width:900px){.stays{max-width:62rem}}
+.stay{background:#fff;border-radius:1rem;overflow:hidden;border:1px solid var(--line);display:flex;flex-direction:column}
+.stay img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;background:var(--line)}
+.stay__body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.stay h3{font-family:var(--serif);font-weight:600;font-size:var(--step-1);line-height:1.2;margin:0 0 .15rem}
+.stay p{margin:0;line-height:1.45}
+.stay__desc{font-size:var(--step-0)}
+.stay__price{font-weight:500;color:var(--maquis)}
+.stay__addr{font-size:var(--step--1);color:var(--sea-soft)}
+.stay__links{margin-top:auto!important;padding-top:.6rem;display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:var(--step--1)}
+.stay__links a{font-weight:500}
+.stay--todo{background:transparent;border-style:dashed;justify-content:center;min-height:8rem}
+
 /* FAQ */
 .faq details{border-bottom:1px solid var(--line)}
 .faq details:first-child{border-top:1px solid var(--line)}
@@ -421,14 +437,87 @@ main{padding:0 var(--gutter)}
     </div>
   </section>
 
-  <!-- ===================== HÉBERGEMENTS (en attente du contenu) ===================== -->
+  <!-- ===================== HÉBERGEMENTS ===================== -->
   <section class="section" id="dormir">
     <h2>Où dormir</h2>
     <div class="section__body">
-      <div class="soon">
-        <p>On rassemble les adresses où dormir sur l’île et sur le continent.</p>
-        <p class="small">Revenez bientôt : la liste arrive.</p>
-      </div>
+      <p>Vous trouverez tous les hébergements de l’île sur le site de l’Union des commerçants&nbsp;: <a href="https://www.iledulevant.com.fr/hebergeurs/" target="_blank" rel="noopener">iledulevant.com.fr</a>.</p>
+      <p class="small">On vous a fait une petite sélection des hébergements sympas les plus proches des festivités. Les prix sont donnés à titre indicatif, en fonction des infos que nous avons&nbsp;: vérifiez auprès des hébergeurs&nbsp;!</p>
+    </div>
+    <div class="stays">
+        <article class="stay">
+          <img src="images/hebergements/cabo-verde.webp" width="660" height="440" loading="lazy" decoding="async" alt="">
+          <div class="stay__body">
+            <h3>Cabo Verde</h3>
+            <p class="stay__desc">2 studios, 1 chambre et 1 appartement, avec piscine</p>
+            <p class="stay__price">À partir de 64&nbsp;€ la nuit</p>
+            <p class="stay__addr">Chemin du Titan</p>
+            <p class="stay__links"><a href="tel:+33612188759">06&nbsp;12&nbsp;18&nbsp;87&nbsp;59</a>
+            <a href="https://villacaboverde.fr" target="_blank" rel="noopener">villacaboverde.fr</a>
+            <a href="https://www.iledulevant.com.fr/enseignes-location/cabo-verde/" target="_blank" rel="noopener">Voir la fiche</a></p>
+          </div>
+        </article>
+        <article class="stay">
+          <img src="images/hebergements/alize-du-levant.webp" width="660" height="440" loading="lazy" decoding="async" alt="">
+          <div class="stay__body">
+            <h3>L’Alizé du Levant</h3>
+            <p class="stay__desc">5 studios rénovés, vue mer</p>
+            <p class="stay__price">À partir de 60&nbsp;€ la nuit</p>
+            <p class="stay__addr">277, corniche de la Pinède</p>
+            <p class="stay__links"><a href="tel:+33670585165">06&nbsp;70&nbsp;58&nbsp;51&nbsp;65</a>
+            <a href="https://www.iledulevant.com.fr/enseignes-location/alize/" target="_blank" rel="noopener">Voir la fiche</a></p>
+          </div>
+        </article>
+        <article class="stay">
+          <img src="images/hebergements/solea.webp" width="660" height="440" loading="lazy" decoding="async" alt="">
+          <div class="stay__body">
+            <h3>Soléa</h3>
+            <p class="stay__desc">3 lodges, avec piscine</p>
+            <p class="stay__price">À partir de 80&nbsp;€ la nuit</p>
+            <p class="stay__addr">711, corniche de la Côte 60</p>
+            <p class="stay__links"><a href="tel:+33676487737">06&nbsp;76&nbsp;48&nbsp;77&nbsp;37</a>
+            <a href="https://www.iledulevant.com.fr/enseignes-location/solea/" target="_blank" rel="noopener">Voir la fiche</a></p>
+          </div>
+        </article>
+        <article class="stay">
+          <img src="images/hebergements/eden.webp" width="660" height="440" loading="lazy" decoding="async" alt="">
+          <div class="stay__body">
+            <h3>L’Eden</h3>
+            <p class="stay__desc">1 bungalow, 1 chambre et 1 studio, vue mer</p>
+            <p class="stay__price">À partir de 45&nbsp;€ la nuit</p>
+            <p class="stay__addr">Corniche de la Galère</p>
+            <p class="stay__links"><a href="tel:+33494059135">04&nbsp;94&nbsp;05&nbsp;91&nbsp;35</a>
+            <a href="https://www.iledulevant.com.fr/enseignes-location/eden/" target="_blank" rel="noopener">Voir la fiche</a></p>
+          </div>
+        </article>
+        <article class="stay">
+          <img src="images/hebergements/callipyge.webp" width="660" height="440" loading="lazy" decoding="async" alt="">
+          <div class="stay__body">
+            <h3>La Callipyge des Îles d’Or</h3>
+            <p class="stay__desc">4 chambres et 5 appartements, avec piscine</p>
+            <p class="stay__price">À partir de 75&nbsp;€ la nuit</p>
+            <p class="stay__addr">Chemin du Titan</p>
+            <p class="stay__links"><a href="tel:+33617687394">06&nbsp;17&nbsp;68&nbsp;73&nbsp;94</a>
+            <a href="https://www.iledulevant.com.fr/enseignes-location/callipyge/" target="_blank" rel="noopener">Voir la fiche</a></p>
+          </div>
+        </article>
+        <article class="stay">
+          <img src="images/hebergements/bazar.webp" width="660" height="440" loading="lazy" decoding="async" alt="">
+          <div class="stay__body">
+            <h3>Le Bazar</h3>
+            <p class="stay__desc">3 studios, 1 bungalow et 1 tente safari</p>
+            <p class="stay__price">À partir de 79&nbsp;€ la nuit</p>
+            <p class="stay__addr">213, corniche de l’Arbousier</p>
+            <p class="stay__links"><a href="tel:+33664773739">06&nbsp;64&nbsp;77&nbsp;37&nbsp;39</a>
+            <a href="https://www.iledulevant.com.fr/enseignes-location/bazar/" target="_blank" rel="noopener">Voir la fiche</a></p>
+          </div>
+        </article>
+        <article class="stay stay--todo">
+          <div class="stay__body">
+            <h3>Studio 80</h3>
+            <p class="stay__desc"><span class="tbc">À compléter</span></p>
+          </div>
+        </article>
     </div>
   </section>
 

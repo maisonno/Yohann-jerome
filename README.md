@@ -9,7 +9,7 @@ Site statique, sans étape de build : tout est dans `index.html` (HTML, CSS et J
 Modifier `index.html`, puis commit et push sur `main` : Cloudflare Pages redéploie automatiquement.
 
 Les zones encore à compléter :
-- section « Où dormir » (`id="dormir"`)
+- fiche « Studio 80 » dans la section Où dormir (`id="dormir"`)
 - horaires des trains et des bateaux d'avril 2027 (marqués « À confirmer » dans la section `id="venir"`)
 
 ## Hébergement
