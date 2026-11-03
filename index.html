@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jérôme &amp; Yohann · 9 et 10 avril 2027 · Île du Levant</title>
+<meta name="description" content="Le mariage de Jérôme et Yohann, les 9 et 10 avril 2027 sur l'île du Levant : programme, accès, hébergements et questions pratiques.">
+<meta name="theme-color" content="#13306A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313306A'/%3E%3Ccircle cx='32' cy='38' r='16' fill='%23F4C430'/%3E%3Cpath d='M0 40 Q16 30 30 34 T64 36 V64 H0Z' fill='%232E5B45'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/fraunces-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/fraunces-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Fraunces";font-style:normal;font-weight:600;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Fraunces";font-style:italic;font-weight:400;font-display:swap;src:url(fonts/fraunces-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/dm-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"DM Sans";font-style:normal;font-weight:500;font-display:swap;src:url(fonts/dm-sans-latin-500-normal.woff2) format("woff2")}
+
+/* ========== Palette : l'île en avril ========== */
+:root{
+  --chalk:#F2F5F1;     /* fond : blanc de chaux, légèrement vert */
+  --sea:#13306A;       /* encre : bleu Méditerranée profond */
+  --maquis:#2E5B45;    /* vert du maquis */
+  --genet:#F4C430;     /* jaune genêt, l'accent */
+  --sky:#BFDCE6;       /* ciel du matin */
+  --sea-soft:#4A5F86;  /* texte secondaire */
+  --line:#D5DED6;
+
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+
+  --step--1:clamp(.84rem,.8rem + .2vw,.92rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
+  --step-1:clamp(1.25rem,1.15rem + .5vw,1.5rem);
+  --step-2:clamp(1.6rem,1.4rem + 1vw,2.2rem);
+  --step-3:clamp(2.1rem,1.6rem + 2.4vw,3.4rem);
+  --step-4:clamp(3.6rem,2rem + 6vw,6.6rem);
+
+  --measure:38rem;
+  --gutter:clamp(1.25rem,5vw,3rem);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--chalk);color:var(--sea);font-family:var(--sans);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.2em}
+a:hover{text-decoration-color:var(--genet)}
+:focus-visible{outline:3px solid var(--genet);outline-offset:3px;border-radius:2px}
+p{margin:0 0 1em}
+
+/* ========== Hero : le lever de soleil sur le Levant ========== */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;
+  background:linear-gradient(180deg,var(--sky) 0%,#E4EFEA 52%,var(--chalk) 64%)}
+.hero__scene{position:absolute;inset:auto 0 0 0;height:62%;pointer-events:none}
+.hero__scene svg{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:max(100%,900px);height:100%}
+.sun{transform-box:fill-box;transform-origin:center;animation:rise 2.8s cubic-bezier(.2,.7,.2,1) .2s both}
+@keyframes rise{from{transform:translateY(55%)}to{transform:translateY(0)}}
+
+.hero__text{position:relative;z-index:1;padding:0 var(--gutter);margin:0 auto;width:100%;max-width:calc(72rem + 2 * var(--gutter));
+  position:absolute;top:clamp(5.5rem,16vh,9rem);left:0;right:0}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:var(--step-4);line-height:.92;letter-spacing:-.025em;margin:0;
+  font-variation-settings:"opsz" 144}
+.hero h1 .amp{display:block;font-style:italic;color:var(--maquis);font-size:.62em;line-height:1.1;margin:.05em 0 .02em .08em}
+.hero__date{font-family:var(--serif);font-size:var(--step-1);margin:1.2rem 0 0;max-width:24ch;line-height:1.3}
+.hero__count{font-size:var(--step--1);color:var(--sea-soft);margin-top:.5rem}
+
+.hero__foot{position:relative;z-index:2;padding:0 var(--gutter) 1.6rem;max-width:calc(72rem + 2 * var(--gutter));width:100%;margin:0 auto;color:var(--chalk)}
+.hero__foot a{display:inline-block;font-weight:500;color:var(--chalk);text-decoration:none;border-bottom:1px solid rgba(242,245,241,.5);padding-bottom:.15rem}
+.hero__foot a:hover{border-color:var(--genet)}
+
+/* ========== Navigation ========== */
+.nav{position:sticky;top:0;z-index:10;background:rgba(242,245,241,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav ul{list-style:none;margin:0 auto;padding:0 var(--gutter);max-width:calc(72rem + 2 * var(--gutter));display:flex;gap:1.6rem;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a{display:block;padding:1rem 0;white-space:nowrap;text-decoration:none;font-size:var(--step--1);font-weight:500;color:var(--sea-soft);border-bottom:2px solid transparent}
+.nav a:hover,.nav a[aria-current="true"]{color:var(--sea);border-bottom-color:var(--genet)}
+
+/* ========== Sections ========== */
+main{padding:0 var(--gutter)}
+.section{max-width:72rem;margin:0 auto;padding:clamp(4rem,10vw,7.5rem) 0;border-top:1px solid var(--line);
+  display:grid;gap:1.5rem 4rem;grid-template-columns:1fr}
+.section:first-child{border-top:0}
+@media (min-width:900px){.section{grid-template-columns:20rem minmax(0,var(--measure));justify-content:start}.section h2{font-size:clamp(2.2rem,1.2rem + 1.6vw,2.9rem)}}
+.section h2{font-family:var(--serif);font-weight:400;font-size:var(--step-3);line-height:1.05;letter-spacing:-.015em;margin:0;hyphens:manual;overflow-wrap:break-word}
+.section__body{max-width:var(--measure)}
+.section__body p{font-family:var(--serif);font-size:var(--step-1);line-height:1.55}
+.section__body p.small{font-family:var(--sans);font-size:var(--step-0);line-height:1.6;color:var(--sea-soft)}
+
+/* Intro */
+.intro .section__body p:first-child::first-letter{font-family:var(--serif);float:left;font-size:4.1em;line-height:.8;padding:.06em .08em 0 0;color:var(--maquis)}
+.signature{font-family:var(--serif);font-style:italic;font-size:var(--step-1);color:var(--maquis);margin-top:1.5rem}
+
+/* Programme : une vraie chronologie */
+.day{margin:0 0 3rem}
+.day:last-child{margin-bottom:0}
+.day h3{font-family:var(--serif);font-weight:600;font-size:var(--step-2);margin:0 0 1.2rem;line-height:1.1}
+.day h3 span{display:block;font-family:var(--sans);font-weight:400;font-size:var(--step--1);color:var(--sea-soft);margin-top:.35rem;letter-spacing:.01em}
+.timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--genet)}
+.timeline li{display:grid;grid-template-columns:4.6rem 1fr;align-items:baseline;gap:.5rem;padding:.85rem 0 .85rem 1.2rem;position:relative}
+.timeline li::before{content:"";position:absolute;left:-.5rem;top:1.35rem;width:.75rem;height:.75rem;border-radius:50%;background:var(--chalk);border:3px solid var(--genet)}
+.timeline time{font-family:var(--serif);font-size:var(--step-1);font-weight:600;font-variant-numeric:lining-nums tabular-nums}
+.timeline .what{font-size:var(--step-1);font-family:var(--serif);line-height:1.3}
+.timeline .where{display:block;font-family:var(--sans);font-size:var(--step--1);color:var(--sea-soft);margin-top:.2rem}
+.cal{margin-top:2.4rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;font:500 var(--step-0)/1 var(--sans);color:var(--chalk);background:var(--sea);border:0;border-radius:999px;padding:.95rem 1.4rem;cursor:pointer;text-decoration:none}
+.btn:hover{background:var(--maquis)}
+.btn svg{width:1.1em;height:1.1em}
+
+/* L'île */
+.facts{list-style:none;margin:2.2rem 0 0;padding:0;display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr))}
+.facts li{border-top:3px solid var(--maquis);padding-top:.8rem;font-size:var(--step--1);color:var(--sea-soft);line-height:1.45}
+.facts strong{display:block;font-family:var(--serif);font-weight:400;font-size:var(--step-2);color:var(--sea);line-height:1.1;margin-bottom:.3rem}
+
+/* Bientôt */
+.soon{background:var(--sea);color:var(--chalk);border-radius:1.2rem;padding:1.6rem 1.7rem;max-width:var(--measure)}
+.soon p{font-family:var(--serif);font-size:var(--step-1);margin:0 0 .4rem}
+.soon p.small{font-family:var(--sans);font-size:var(--step--1);color:#C9D3E6;margin:0}
+.soon-pair{display:grid;gap:1rem}
+
+
+/* Sous-parties de l'île */
+.quote{margin:0 0 1em;padding:0 0 0 1.2rem;border-left:3px solid var(--genet)}
+.quote p{font-style:italic;color:var(--maquis)}
+.sub{margin-top:3.5rem}
+.sub h3{font-family:var(--serif);font-weight:600;font-size:var(--step-2);line-height:1.1;margin:0 0 1rem}
+.section__body .sub p{font-family:var(--sans);font-size:var(--step-0);line-height:1.65}
+.rules{list-style:none;margin:0 0 1.4em;padding:0;display:grid;gap:.7rem}
+.rules li{position:relative;padding-left:1.6rem;line-height:1.5}
+.rules li::before{content:"";position:absolute;left:0;top:.38em;width:.85rem;height:.85rem;border-radius:50%}
+.rules b{font-weight:500}
+.r-must::before{background:#5BB8E8}
+.r-free::before{background:#D9A14A}
+.r-ok::before{background:transparent;box-shadow:inset 0 0 0 3px #D9A14A}
+.r-no::before{background:#A9AEB3}
+.charter{list-style:none;counter-reset:c;margin:0;padding:0}
+.charter li{counter-increment:c;display:grid;grid-template-columns:2.2rem 1fr;gap:.4rem;padding:.7rem 0;border-top:1px solid var(--line);line-height:1.5}
+.charter li:last-child{border-bottom:1px solid var(--line)}
+.charter li::before{content:counter(c);font-family:var(--serif);font-weight:600;font-size:var(--step-1);color:var(--maquis);line-height:1.2}
+.services{margin:1.6rem 0 0;display:grid;gap:1rem}
+.services div{display:grid;grid-template-columns:1fr;gap:.35rem;padding:1.1rem 1.2rem;background:#E3ECE5;border-radius:.8rem}
+.services dt{font-family:var(--serif);font-weight:600;font-size:var(--step-1);line-height:1.2}
+.services dd{margin:0;line-height:1.55}
+.services a{font-weight:500}
+.map{margin:3rem 0 0;grid-column:1/-1}
+.map img{width:100%;height:auto;border-radius:1rem;background:#2E5B45}
+.map figcaption{font-size:var(--step--1);color:var(--sea-soft);margin-top:.8rem;max-width:var(--measure)}
+@media (min-width:900px){.map{max-width:62rem}}
+.faq .answer strong{font-weight:500}
+
+
+/* Comment venir */
+.notice{background:#FCEFB8;color:#4A3A00;border-radius:.9rem;padding:1.1rem 1.3rem;margin:1.6rem 0 0}
+.section__body .notice p{font-family:var(--sans);font-size:var(--step-0);line-height:1.55;margin:0}
+.tbc{display:inline-block;background:#F4C430;color:#3A2E00;font:500 .78rem/1.4 var(--sans);padding:.1em .55em;border-radius:999px;vertical-align:.12em;margin-right:.3em;white-space:nowrap}
+.sub h4{font-family:var(--serif);font-weight:400;font-style:italic;font-size:var(--step-1);color:var(--maquis);margin:2rem 0 .6rem}
+.routes{margin:1.2rem 0 1.4rem}
+.routes div{padding:1rem 0;border-top:1px solid var(--line)}
+.routes div:last-child{border-bottom:1px solid var(--line)}
+.routes dt{font-weight:500;margin-bottom:.4rem}
+.routes dd{margin:0}
+.routes ul,.plain{margin:0;padding-left:1.1rem;line-height:1.55}
+.routes li,.plain li{margin:.25rem 0}
+.routes li::marker,.plain li::marker{color:var(--maquis)}
+.phones{list-style:none;margin:0 0 1.2em;padding:0;display:grid;gap:.4rem}
+.phones a{font-weight:500}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;align-items:baseline;padding:1.15rem 0;font-family:var(--serif);font-size:var(--step-1);line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--sans);font-size:1.5rem;line-height:1;color:var(--maquis);transition:transform .25s ease;flex:none}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .answer{padding:0 0 1.3rem;max-width:34rem}
+.faq .answer p{font-family:var(--sans);font-size:var(--step-0);line-height:1.6}
+.todo{background:#FCEFB8;color:#5A4500;font-size:.85em;padding:.05em .4em;border-radius:.3em;font-family:var(--sans);font-style:normal}
+
+/* Pied de page */
+.footer{background:var(--maquis);color:var(--chalk);padding:4rem var(--gutter) 3rem;text-align:center}
+.footer p{margin:0}
+.footer .names{font-family:var(--serif);font-size:var(--step-3);line-height:1}
+.footer .names em{color:var(--genet)}
+.footer .small{font-size:var(--step--1);opacity:.8;margin-top:1rem}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .sun{animation:none}
+  .faq summary::after{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="haut">
+  <div class="hero__text">
+    <h1>Jérôme <span class="amp">&amp;</span> Yohann</h1>
+    <p class="hero__date">se marient les 9&nbsp;et&nbsp;10&nbsp;avril&nbsp;2027 sur l’île du Levant</p>
+    <p class="hero__count" id="countdown" hidden></p>
+  </div>
+
+  <div class="hero__scene" aria-hidden="true">
+    <!-- Le soleil se lève derrière le Levant : une longue arête rocheuse posée sur la mer -->
+    <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice">
+      <circle class="sun" cx="640" cy="236" r="112" fill="#F4C430"/>
+      <path fill="#2E5B45" d="M0 290 C80 287 150 280 230 274 C310 268 370 256 450 250 C530 244 570 253 650 249 C730 245 770 236 850 238 C930 240 990 253 1070 265 C1130 274 1175 282 1200 285 L1200 300 L0 300 Z"/>
+      <path fill="#244A38" d="M380 300 C450 284 520 276 600 274 C680 272 740 280 820 290 L860 300 Z" opacity=".6"/>
+      <rect y="294" width="1200" height="106" fill="#13306A"/>
+      <g stroke="#F4C430" stroke-width="3" stroke-linecap="round" opacity=".8">
+        <line x1="570" y1="318" x2="710" y2="318"/>
+        <line x1="595" y1="336" x2="685" y2="336"/>
+        <line x1="618" y1="354" x2="662" y2="354"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero__foot">
+    <a href="#programme">Voir le programme</a>
+  </div>
+</header>
+
+<nav class="nav" aria-label="Sections du site">
+  <ul>
+    <li><a href="#mot">Le mot des mariés</a></li>
+    <li><a href="#programme">Programme</a></li>
+    <li><a href="#ile">L’île du Levant</a></li>
+    <li><a href="#venir">Comment venir</a></li>
+    <li><a href="#dormir">Où dormir</a></li>
+    <li><a href="#faq">Questions</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <!-- ===================== MOT D'INTRO (texte provisoire) ===================== -->
+  <section class="section intro" id="mot">
+    <h2>Le mot des mariés</h2>
+    <div class="section__body">
+      <p>On a dit oui. Et comme on ne fait jamais les choses à moitié, on vous embarque pour deux jours sur une île à part, avec un karaoké, une cérémonie face à la mer et une soirée qui finira tard.</p>
+      <p>Ce site rassemble tout ce qu’il faut savoir : le programme, comment arriver jusqu’ici (oui, il y a un bateau à prendre), où dormir, et les réponses aux questions que vous n’osez pas poser.</p>
+      <p class="signature">Jérôme et Yohann</p>
+    </div>
+  </section>
+
+  <!-- ===================== PROGRAMME ===================== -->
+  <section class="section" id="programme">
+    <h2>Le programme</h2>
+    <div class="section__body">
+
+      <div class="day">
+        <h3>Vendredi<span>9 avril 2027</span></h3>
+        <ol class="timeline">
+          <li><time datetime="2027-04-09T19:00">19h</time>
+            <div><span class="what">Apéro et karaoké</span><span class="where">À la Pomme d’Adam</span></div></li>
+        </ol>
+      </div>
+
+      <div class="day">
+        <h3>Samedi<span>10 avril 2027</span></h3>
+        <ol class="timeline">
+          <li><time datetime="2027-04-10T16:00">16h</time>
+            <div><span class="what">Cérémonie</span><span class="where">Sur la terrasse vue mer des Bibis</span></div></li>
+          <li><time datetime="2027-04-10T18:00">18h</time>
+            <div><span class="what">Vin d’honneur</span><span class="where">Sur la place du village</span></div></li>
+          <li><time datetime="2027-04-10T20:00">20h</time>
+            <div><span class="what">Dîner</span><span class="where">À la Pomme d’Adam</span></div></li>
+          <li><time datetime="2027-04-10T22:00">22h</time>
+            <div><span class="what">Soirée dansante</span><span class="where">Jusqu’au bout de la nuit</span></div></li>
+        </ol>
+      </div>
+
+      <div class="cal">
+        <button class="btn" type="button" id="add-cal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+          Ajouter à mon agenda
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== L'ÎLE DU LEVANT ===================== -->
+  <section class="section" id="ile">
+    <h2>L’île du Levant</h2>
+    <div class="section__body">
+      <p>Troisième sœur des Îles d’Or après Porquerolles et Port-Cros, l’île du Levant est un monde à part, à l’écart de la civilisation.</p>
+      <p>95&nbsp;% de l’île est occupé par un terrain militaire où la DGA teste ses nouveaux missiles et autres jouets.</p>
+      <p>Le domaine d’Héliopolis occupe les 5&nbsp;% restants. Il est, selon ses fondateurs&nbsp;:</p>
+      <blockquote class="quote"><p>« une simple cité rustique où les amateurs d’air et de soleil viendront se reposer des fatigues de la civilisation artificielle des villes. »</p></blockquote>
+
+      <ul class="facts">
+        <li><strong>95&nbsp;%</strong>de l’île en terrain militaire</li>
+        <li><strong>120&nbsp;m</strong>d’altitude pour la place du village</li>
+        <li><strong>15&nbsp;min</strong>de grimpette du port à la place</li>
+      </ul>
+
+      <div class="sub" id="naturisme">
+        <h3>Le naturisme</h3>
+        <p>Héliopolis est un domaine naturiste. Cela ne veut pas dire que l’on se balade à poil partout. Le naturisme est réglementé. Au Levant, la nudité est&nbsp;:</p>
+        <ul class="rules">
+          <li class="r-must"><b>Obligatoire</b> sur la plage des Grottes, le sentier du littoral et tous les lieux de baignade</li>
+          <li class="r-free"><b>Libre</b> sur les corniches et les chemins</li>
+          <li class="r-ok"><b>Tolérée</b> sur la place du village</li>
+          <li class="r-no"><b>Interdite</b> sur le port, dans les commerces et dans les bâtiments administratifs</li>
+        </ul>
+        <p>En été, l’habit de base du Levantin, c’est le paréo. Il se noue et se dénoue au gré des pérégrinations. Mais quand il fait froid, on se balade bien couvert, y compris sur le bord de mer.</p>
+        <p>Le soir, le Levantin s’habille pour sortir.</p>
+      </div>
+
+      <div class="sub" id="charte">
+        <h3>La charte du parfait Levantin</h3>
+        <ol class="charter">
+          <li>Saluer en souriant les personnes que l’on croise.</li>
+          <li>Pratiquer le naturisme dans un respect mutuel.</li>
+          <li>La nudité est de règle sur la plage des Grottes, le sentier du littoral et tous les lieux de baignade, libre sur les corniches, interdite sur le port et dans les bâtiments administratifs.</li>
+          <li>L’eau est un bien rare et précieux&nbsp;: ne pas la gaspiller.</li>
+          <li>Respecter la Nature et ne faire aucun prélèvement abusif.</li>
+          <li>Respecter la propreté du Domaine et remporter tous ses déchets.</li>
+          <li>Le feu est notre pire ennemi&nbsp;: ne pas fumer sur l’ensemble du Domaine, ne pas allumer de feu, récupérer les mégots.</li>
+        </ol>
+      </div>
+
+      <div class="sub" id="deplacer">
+        <h3>Se déplacer sur l’île</h3>
+        <p>L’île est très pentue. La Pomme d’Adam, notre bar-restaurant, se trouve sur la place du village, à 120&nbsp;mètres au-dessus du niveau de la mer. Le port est, très classiquement, au niveau de la mer. Il y a un bon quart d’heure de grimpette pour monter à la place.</p>
+        <p>Les festivités se dérouleront en haut, autour de la place. On vous recommande de ne pas vous loger trop bas, sauf si vous avez envie de vous muscler les cuisses.</p>
+        <dl class="services">
+          <div><dt>Taxi</dt><dd>Pour celles et ceux qui ne veulent pas grimper à pied&nbsp;: 10&nbsp;€ par personne, quelle que soit la destination.<br><a href="tel:+33617903541">Gaël&nbsp;: 06&nbsp;17&nbsp;90&nbsp;35&nbsp;41</a></dd></div>
+          <div><dt>Bagages</dt><dd>Pour éviter de les monter, confiez-les au transporteur de l’île (5&nbsp;€ par bagage). Il y a toujours un camion qui attend au port à l’arrivée des bateaux.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <figure class="map">
+      <a href="images/plan-heliopolis.webp" target="_blank" rel="noopener">
+        <img src="images/plan-heliopolis-1200.webp" srcset="images/plan-heliopolis-1200.webp 1200w, images/plan-heliopolis.webp 2200w" sizes="(min-width: 1000px) 62rem, 100vw" width="2200" height="1181" loading="lazy" decoding="async"
+          alt="Plan illustré du domaine d’Héliopolis : le port de l’Ayguade en bas, la place Durville et la Pomme d’Adam en haut, les corniches et le sentier des naturistes autour.">
+      </a>
+      <figcaption>Le plan d’Héliopolis. Le port de l’Ayguade est en bas, la place Durville et la Pomme d’Adam en haut. Touchez le plan pour l’ouvrir en grand.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ===================== COMMENT VENIR ===================== -->
+  <section class="section" id="venir">
+    <h2>Comment venir</h2>
+    <div class="section__body">
+      <p>L’île du Levant se mérite. C’est le bout du monde, particulièrement hors saison. Voici nos astuces de pro pour y venir, et en repartir.</p>
+
+      <div class="notice" role="note">
+        <p><span class="tbc">À confirmer</span> Les horaires des trains et des bateaux d’avril 2027 ne seront connus qu’environ trois mois avant. On les mettra ici dès qu’ils seront publiés. D’ici là, ceux indiqués ci-dessous sont donnés à titre indicatif.</p>
+      </div>
+
+      <div class="sub" id="bateaux">
+        <h3>Les bateaux</h3>
+        <p>Il y a deux compagnies. Dans les deux cas, prévoyez d’arriver 30&nbsp;minutes avant le départ pour acheter vos billets. Pas besoin de réserver à l’avance.</p>
+        <dl class="services">
+          <div><dt>TLV-TVM</dt><dd>Départ du port d’Hyères (port La Gavine), environ 1h30 de traversée.<br>Après le week-end de Pâques, la TLV navigue tous les jours&nbsp;: deux allers Hyères&nbsp;&gt;&nbsp;Le Levant le matin, à 8h00 et 9h00, et un retour Le Levant&nbsp;&gt;&nbsp;Hyères à 16h30. <span class="tbc">À confirmer</span></dd></div>
+          <div><dt>Vedettes des Îles d’Or</dt><dd>Départ du port du Lavandou, environ 35&nbsp;minutes de traversée pour les bateaux directs, 1h environ pour ceux qui passent par Port-Cros. <span class="tbc">Horaires à venir</span></dd></div>
+        </dl>
+      </div>
+
+      <div class="sub" id="bus-taxi">
+        <h3>Le bus et le taxi</h3>
+        <dl class="routes">
+          <div><dt>De la gare de Toulon au Lavandou</dt>
+            <dd><ul><li>Bus régional Zou 878&nbsp;: une grosse heure, 3&nbsp;€. Horaires sur le site ou l’appli Zou.</li><li>Taxi&nbsp;: 50&nbsp;minutes, 80 à 90&nbsp;€.</li></ul></dd></div>
+          <div><dt>De la gare de Toulon au port d’Hyères</dt>
+            <dd><ul><li>Le taxi reste la meilleure option.</li><li>Bus Mistral 102 vers l’aéroport, puis 15&nbsp;minutes de marche.</li><li>TER jusqu’à la gare de Hyères, puis bus Mistral 67.</li></ul></dd></div>
+          <div><dt>De l’aéroport de Toulon au port du Lavandou</dt>
+            <dd><ul><li>Bus régional Zou 873&nbsp;: une petite heure, 3&nbsp;€. Horaires sur le site ou l’appli Zou.</li><li>Taxi ou Uber&nbsp;: 50&nbsp;minutes, 50 à 60&nbsp;€.</li></ul></dd></div>
+          <div><dt>De l’aéroport de Toulon au port d’Hyères</dt>
+            <dd><ul><li>15&nbsp;minutes à pied (1,5&nbsp;km).</li><li>Bus 63.</li><li>Pas sûr qu’un taxi vous prenne pour une course de 3&nbsp;minutes…</li></ul></dd></div>
+        </dl>
+        <p>À la gare de Toulon, il y a une station de taxis avec plein de véhicules. Attention, dans l’autre sens, il est impératif de réserver un taxi ou un VTC à l’avance&nbsp;:</p>
+        <ul class="phones">
+          <li>Au Lavandou&nbsp;: <a href="tel:+33614342943">Elegance Taxi, 06&nbsp;14&nbsp;34&nbsp;29&nbsp;43</a></li>
+          <li>À Hyères&nbsp;: <a href="tel:+33494006000">standard des taxis, 04&nbsp;94&nbsp;00&nbsp;60&nbsp;00</a></li>
+        </ul>
+        <p>Il y a aussi quelques TGV qui arrivent directement à la gare de Hyères. Dans ce cas, vous avez le choix entre le taxi et le bus Mistral 67 (2 à 3 bus par heure en général).</p>
+        <p>Le moteur de recherche d’itinéraires de la Région, <a href="https://zou.maregionsud.fr" target="_blank" rel="noopener">Zou</a>, inclut tous les modes de transports en commun.</p>
+      </div>
+
+      <div class="sub" id="train">
+        <h3>En train depuis Paris</h3>
+        <p>Les horaires de train ne sont pas encore tous connus. Mais en principe, ça donne à peu près ça&nbsp;: <span class="tbc">À confirmer</span></p>
+
+        <h4>Aller</h4>
+        <dl class="routes">
+          <div><dt>Train de nuit, le mercredi 7 ou le jeudi 8 avril au soir</dt>
+            <dd><ul><li>Train de nuit vers 21h00 à Paris-Austerlitz, arrivée le lendemain vers 7h30 à Toulon.</li><li>Taxi ou VTC pour Hyères (TER + bus trop juste).</li><li>Arrivée vers 8h30 au port d’Hyères. Bateau à 9h00, arrivée au Levant vers 10h30.</li></ul></dd></div>
+          <div><dt>Train de jour, le jeudi 8 ou le vendredi 9 avril au matin</dt>
+            <dd><ul><li>TGV dans la matinée pour Toulon (par exemple 8h22&nbsp;&gt;&nbsp;12h10 ou 9h09&nbsp;&gt;&nbsp;13h11).</li><li>Bus, taxi ou VTC pour Le Lavandou.</li><li>Arrivée vers 16h00 au port du Lavandou. Bateau à 16h30, arrivée au Levant vers 17h05.</li></ul></dd></div>
+        </dl>
+
+        <h4>Retour</h4>
+        <dl class="routes">
+          <div><dt>Dimanche 11 avril au matin</dt>
+            <dd><ul><li>Bateau à 10h40 pour Le Lavandou, arrivée vers 11h15.</li><li>Taxi ou VTC vers la gare de Toulon (le dimanche hors saison, méfiez-vous du bus régional).</li><li>TGV pour Paris (par exemple 15h09&nbsp;&gt;&nbsp;19h22 ou 15h50&nbsp;&gt;&nbsp;20h22).</li></ul></dd></div>
+          <div><dt>Dimanche 11 avril en fin de journée</dt>
+            <dd><ul><li>Bateau à 16h30 pour Hyères, arrivée vers 18h00.</li><li>Taxi ou VTC vers la gare de Toulon (bus + TER trop juste).</li><li>Dernier TGV pour Paris vers 19h15, avec une correspondance à Aix TGV, arrivée vers 0h20.</li></ul></dd></div>
+          <div><dt>Lundi 12 avril au matin</dt>
+            <dd><ul><li>Bateau à 10h40 pour Le Lavandou, arrivée vers 11h15.</li><li>Taxi, VTC ou bus régional vers la gare de Toulon.</li><li>TGV pour Paris (par exemple 15h09&nbsp;&gt;&nbsp;19h22 ou 15h50&nbsp;&gt;&nbsp;20h22).</li></ul></dd></div>
+        </dl>
+      </div>
+
+      <div class="sub" id="voiture">
+        <h3>En voiture</h3>
+        <p>Si vous passez par Hyères, il y a plein de parkings gratuits à proximité du port.</p>
+        <p>Si vous passez par Le Lavandou, c’est un peu plus compliqué&nbsp;:</p>
+        <ul class="plain">
+          <li>Le parking du port du Lavandou est payant, et assez cher.</li>
+          <li>On peut trouver des places gratuites en continuant vers l’est le long de la mer, après le port&nbsp;: il y a deux terre-pleins où l’on peut se garer sans payer.</li>
+          <li>Le parking du marché est également gratuit et pas très loin. Mais il doit être vide le jeudi matin pour le marché, donc il ne convient que si vous venez juste pour le week-end.</li>
+        </ul>
+      </div>
+
+      <div class="sub" id="avion">
+        <h3>En avion depuis Paris</h3>
+        <p>Si vous vous moquez de votre karma carbone, l’avion est malheureusement une option efficace. L’aéroport de Toulon est à 15&nbsp;minutes à pied du port d’Hyères.</p>
+        <p>Il faut prendre un avion tôt le matin pour attraper le bateau de 9h00 à Hyères, donc atterrir avant 8h00.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HÉBERGEMENTS (en attente du contenu) ===================== -->
+  <section class="section" id="dormir">
+    <h2>Où dormir</h2>
+    <div class="section__body">
+      <div class="soon">
+        <p>On rassemble les adresses où dormir sur l’île et sur le continent.</p>
+        <p class="small">Revenez bientôt : la liste arrive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section faq" id="faq">
+    <h2>Les questions fréquentes</h2>
+    <div class="section__body">
+
+      <details>
+        <summary>Doit-on vraiment se balader à poil&nbsp;?</summary>
+        <div class="answer">
+          <p>Non, le naturisme n’est obligatoire que sur le bord de mer. Sur le reste de l’île, on peut (et parfois on doit) être habillé.</p>
+          <p>Si le climat le permet, on vous recommande cependant d’aller vous tremper les fesses nues dans la mer, à la plage ou dans l’une des nombreuses petites criques isolées. Cela fait partie des plaisirs du Levant.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Peut-on faire des courses sur l’île&nbsp;?</summary>
+        <div class="answer">
+          <p>Il y a deux petites épiceries pour les courses de première nécessité, un antiquaire et un marchand de paréos. Et c’est tout. Le Levant n’est pas une destination shopping.</p>
+          <p><strong>Plus important&nbsp;: il n’y a ni pharmacie ni banque.</strong></p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Que mettre dans ma valise&nbsp;?</summary>
+        <div class="answer">
+          <p>A minima, une tenue blanche appropriée pour un mariage. Pensez aussi à prendre un paréo, de la crème solaire et de l’anti-moustique.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Est-ce qu’il y a une liste de mariage&nbsp;?</summary>
+        <div class="answer">
+          <p>Non.</p>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p class="names">Jérôme <em>&amp;</em> Yohann</p>
+  <p class="small">Île du Levant, 9 et 10 avril 2027</p>
+</footer>
+
+<script>
+(function(){
+  // Compte à rebours jusqu'à la cérémonie
+  var el = document.getElementById('countdown');
+  var target = new Date('2027-04-10T16:00:00+02:00');
+  var days = Math.ceil((target - new Date()) / 86400000);
+  if (days > 1) { el.textContent = 'Plus que ' + days + ' jours.'; el.hidden = false; }
+  else if (days === 1) { el.textContent = 'C’est demain !'; el.hidden = false; }
+  else if (days === 0) { el.textContent = 'C’est aujourd’hui !'; el.hidden = false; }
+
+  // Fichier agenda (.ics) avec les deux soirées
+  var ics = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Mariage Jerome et Yohann//FR','CALSCALE:GREGORIAN','METHOD:PUBLISH',
+    'BEGIN:VEVENT','UID:apero-20270409@mariage-jerome-yohann','DTSTAMP:20261103T000000Z',
+    'DTSTART:20270409T170000Z','DTEND:20270409T220000Z',
+    'SUMMARY:Mariage Jérôme & Yohann : apéro et karaoké',
+    'LOCATION:La Pomme d\'Adam\\, Héliopolis\\, Île du Levant\\, 83400 Hyères',
+    'END:VEVENT',
+    'BEGIN:VEVENT','UID:mariage-20270410@mariage-jerome-yohann','DTSTAMP:20261103T000000Z',
+    'DTSTART:20270410T140000Z','DTEND:20270411T000000Z',
+    'SUMMARY:Mariage Jérôme & Yohann',
+    'DESCRIPTION:16h cérémonie\\, 18h vin d\'honneur\\, 20h dîner\\, 22h soirée dansante',
+    'LOCATION:Héliopolis\\, Île du Levant\\, 83400 Hyères',
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+  document.getElementById('add-cal').addEventListener('click', function(){
+    var blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'mariage-jerome-yohann.ics';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 1000);
+  });
+
+  // Section courante soulignée dans la navigation
+  var links = document.querySelectorAll('.nav a');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) {
+          links.forEach(function(l){ l.setAttribute('aria-current', l.getAttribute('href') === '#' + e.target.id ? 'true' : 'false'); });
+        }
+      });
+    }, {rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main .section').forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
