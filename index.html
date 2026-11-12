@@ -834,6 +834,15 @@ main{padding:0 var(--gutter)}
     document.getElementById('lbl-adultes').textContent = a > 1 ? 'adultes' : 'adulte';
     document.getElementById('lbl-enfants').textContent = e > 1 ? 'êtres humains non majeurs' : 'être humain non majeur';
   }
+  // Nombre d'adultes prérempli selon la civilité (« Monsieur & Madame » = 2, etc.),
+  // tant que l'invité n'a pas changé le nombre lui-même
+  var adultesTouches = false;
+  form.adultes.addEventListener('change', function(){ adultesTouches = true; });
+  form.civ.addEventListener('change', function(){
+    if (adultesTouches) return;
+    form.adultes.value = String((form.civ.value.match(/&/g) || []).length + 1);
+    syncPlurals();
+  });
   form.adultes.addEventListener('change', syncPlurals);
   form.enfants.addEventListener('change', syncPlurals);
   syncPlurals();
@@ -884,7 +893,7 @@ main{padding:0 var(--gutter)}
     .then(function(){ btn.disabled = false; btn.textContent = 'Envoyer ma réponse'; });
   });
   document.getElementById('rsvp-again').addEventListener('click', function(){
-    form.reset(); syncDetails(); syncPlurals(); done.hidden = true; form.hidden = false; form.civ.focus();
+    form.reset(); adultesTouches = false; syncDetails(); syncPlurals(); done.hidden = true; form.hidden = false; form.civ.focus();
   });
 })();
 </script>
