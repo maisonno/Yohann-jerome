@@ -21,7 +21,6 @@ Cloudflare Pages, connecté à ce dépôt :
 
 ## Carton réponse (RSVP)
 
-Les réponses sont envoyées par mail via FormSubmit (formsubmit.co), sans serveur.
-L'adresse de destination est la variable `RSVP_EMAIL` dans le script en bas de `index.html`.
-La toute première réponse déclenche un mail d'activation de FormSubmit à cette adresse : il faut cliquer sur le lien pour activer.
-Après activation, FormSubmit fournit un alias (chaîne aléatoire) à mettre à la place de l'adresse, pour ne pas l'exposer dans le code.
+Les réponses sont enregistrées dans la table `public.mariage_rsvp` du projet Supabase « maisonno's Project » (oalmrauioqztacxemfto).
+Le site utilise la clé publishable (publique par conception). La sécurité au niveau des lignes (RLS) n'autorise que l'ajout de réponses : personne ne peut les lire ni les modifier depuis le site.
+Pour consulter les réponses : Table Editor de Supabase, ou `select * from mariage_rsvp order by created_at;`.
