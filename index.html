@@ -233,6 +233,8 @@ main{padding:0 var(--gutter)}
 .card__choice input:checked::before{transform:scale(1)}
 .card__choice input:focus-visible{outline:3px solid var(--genet);outline-offset:2px}
 .card__details[hidden]{display:none}
+.card__details{margin:1.4rem 0 .4rem}
+.card .card__details .card__line{margin:0 0 1.3rem;line-height:2.3}
 .card .card__line--block{display:grid;gap:.3rem;text-align:left;line-height:1.4;margin:1rem auto 0;max-width:40rem}
 .card__line--block label{font-size:var(--step--1);color:var(--sea-soft);font-family:var(--sans)}
 .card textarea{border:1.5px dashed var(--sea-soft);border-radius:.4rem;padding:.6rem .7rem;font-family:var(--sans);font-size:var(--step-0);resize:vertical;min-height:5rem}
@@ -393,7 +395,7 @@ main{padding:0 var(--gutter)}
           <label><input type="radio" name="venue" value="non"> avons le regret de vous annoncer que nous ne pourrons pas être présents.</label>
         </fieldset>
 
-        <div class="card__details" id="rsvp-details">
+        <div class="card__details" id="rsvp-details" hidden>
           <p class="card__line">Nous serons
             <label class="sr-only" for="rsvp-adultes">Nombre d’adultes</label>
             <select id="rsvp-adultes" name="adultes" class="num">
@@ -409,7 +411,7 @@ main{padding:0 var(--gutter)}
                 <option>9</option>
                 <option>10</option>
             </select>
-            adulte(s) et
+            <span id="lbl-adultes">adulte</span> et
             <label class="sr-only" for="rsvp-enfants">Nombre d’enfants</label>
             <select id="rsvp-enfants" name="enfants" class="num">
                 <option selected>0</option>
@@ -424,7 +426,7 @@ main{padding:0 var(--gutter)}
                 <option>9</option>
                 <option>10</option>
             </select>
-            être(s) humain(s) non majeur(s).
+            <span id="lbl-enfants">être humain non majeur</span>.
           </p>
           <p class="card__line">Parmi nous, une personne suit un régime
             <label class="sr-only" for="rsvp-regime">Régime alimentaire</label>
@@ -824,8 +826,16 @@ main{padding:0 var(--gutter)}
   var btn = form.querySelector('button[type="submit"]');
   function syncDetails(){
     var v = form.querySelector('input[name="venue"]:checked');
-    details.hidden = !!(v && v.value === 'non');
+    details.hidden = !(v && v.value === 'oui');
   }
+  function syncPlurals(){
+    var a = parseInt(form.adultes.value, 10), e = parseInt(form.enfants.value, 10);
+    document.getElementById('lbl-adultes').textContent = a > 1 ? 'adultes' : 'adulte';
+    document.getElementById('lbl-enfants').textContent = e > 1 ? 'êtres humains non majeurs' : 'être humain non majeur';
+  }
+  form.adultes.addEventListener('change', syncPlurals);
+  form.enfants.addEventListener('change', syncPlurals);
+  syncPlurals();
   form.querySelectorAll('input[name="venue"]').forEach(function(r){ r.addEventListener('change', syncDetails); });
   function showError(msg){ err.textContent = msg; err.hidden = false; }
   form.addEventListener('submit', function(ev){
@@ -873,7 +883,7 @@ main{padding:0 var(--gutter)}
     .then(function(){ btn.disabled = false; btn.textContent = 'Envoyer ma réponse'; });
   });
   document.getElementById('rsvp-again').addEventListener('click', function(){
-    form.reset(); syncDetails(); done.hidden = true; form.hidden = false; form.civ.focus();
+    form.reset(); syncDetails(); syncPlurals(); done.hidden = true; form.hidden = false; form.civ.focus();
   });
 })();
 </script>
