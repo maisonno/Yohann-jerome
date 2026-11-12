@@ -19,8 +19,12 @@ Cloudflare Pages, connecté à ce dépôt :
 - Build command : (vide)
 - Build output directory : `/`
 
-## Carton réponse (RSVP)
+## Carton réponse (RSVP) et page des réponses
 
-Les réponses sont enregistrées dans la table `public.mariage_rsvp` du projet Supabase « maisonno's Project » (oalmrauioqztacxemfto).
-Le site utilise la clé publishable (publique par conception). La sécurité au niveau des lignes (RLS) n'autorise que l'ajout de réponses : personne ne peut les lire ni les modifier depuis le site.
-Pour consulter les réponses : Table Editor de Supabase, ou `select * from mariage_rsvp order by created_at;`.
+Les réponses sont enregistrées dans la table `public.mariage_rsvp` du projet Supabase « maisonno's Project » (oalmrauioqztacxemfto), avec la clé publishable (publique par conception).
+
+- `index.html` : le carton réponse (ajout d'une réponse).
+- `reponses.html` : la liste de toutes les réponses, avec totaux. Le stylo permet à n'importe qui de modifier une réponse.
+
+Droits (RLS) pour les visiteurs : lecture, ajout et modification autorisés ; suppression impossible.
+Chaque modification garde l'ancienne version dans `private.mariage_rsvp_historique` (invisible depuis le site), pour pouvoir réparer une fausse manip.
