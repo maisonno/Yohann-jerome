@@ -203,6 +203,42 @@ main{padding:0 var(--gutter)}
 .contact__tel{grid-column:2;grid-row:1 / span 2;align-self:center;font-weight:500;white-space:nowrap}
 @media (max-width:480px){.contacts li{grid-template-columns:1fr}.contact__tel{grid-column:1;grid-row:auto;margin-top:.35rem}}
 
+
+/* Carton réponse */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.card{background:#fff;color:var(--sea);border:2px solid var(--sea);outline:1px solid var(--sea);outline-offset:-10px;border-radius:.4rem;
+  padding:clamp(1.8rem,5vw,2.8rem) clamp(1.4rem,5vw,2.8rem);box-shadow:0 18px 40px rgba(19,48,106,.12);transform:rotate(.6deg);text-align:center}
+.card__title{font-family:var(--serif);font-style:italic;font-size:var(--step-2);margin:0;line-height:1.1}
+.section__body .card p.card__sub{font-family:var(--sans);font-size:var(--step--1);color:var(--sea-soft);margin:.4rem 0 1.8rem;letter-spacing:.02em}
+.section__body .card .card__line{font-family:var(--serif);font-size:var(--step-1);line-height:2.1;margin:0 0 .6rem}
+.card select,.card input[type=text],.card textarea{font:inherit;color:var(--sea);background:transparent;border:0;border-bottom:1.5px dashed var(--sea-soft);border-radius:0;padding:.05em .2em;max-width:100%}
+.card select{cursor:pointer;-webkit-appearance:none;appearance:none;padding-right:1.1em;
+  background-image:linear-gradient(45deg,transparent 50%,var(--maquis) 50%),linear-gradient(135deg,var(--maquis) 50%,transparent 50%);
+  background-position:calc(100% - .55em) 55%,calc(100% - .25em) 55%;background-size:.3em .3em;background-repeat:no-repeat}
+.card select.num{width:2.6em;text-align:center}
+.card input[type=text]{width:min(16rem,100%);text-align:center}
+.card select:focus,.card input:focus,.card textarea:focus{outline:none;border-bottom-color:var(--genet);border-bottom-style:solid;background-color:#FFF8DC}
+.card select option[disabled]{color:#A9AEB3}
+.card__choice{border:0;margin:.6rem 0 1.2rem;padding:0;display:grid;gap:.7rem;text-align:left}
+.card__choice label{display:grid;grid-template-columns:1.4rem 1fr;gap:.6rem;align-items:start;font-family:var(--serif);font-size:var(--step-1);line-height:1.4;cursor:pointer}
+.card__choice input{appearance:none;-webkit-appearance:none;width:1.15rem;height:1.15rem;margin:.28em 0 0;border:2px solid var(--sea);border-radius:50%;display:grid;place-content:center;cursor:pointer}
+.card__choice input::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:var(--maquis);transform:scale(0);transition:transform .15s ease}
+.card__choice input:checked::before{transform:scale(1)}
+.card__choice input:focus-visible{outline:3px solid var(--genet);outline-offset:2px}
+.card__details[hidden]{display:none}
+.section__body .card .card__line--block{display:grid;gap:.3rem;text-align:left;line-height:1.4;margin-top:1rem}
+.card__line--block label{font-size:var(--step-0)}
+.card textarea{border:1.5px dashed var(--sea-soft);border-radius:.4rem;padding:.6rem .7rem;font-family:var(--sans);font-size:var(--step-0);resize:vertical;min-height:5rem}
+.card textarea:focus{border-style:solid;border-color:var(--genet)}
+.section__body .card .card__error{font-family:var(--sans);font-size:var(--step--1);color:#A3261B;background:#FBE7E4;border-radius:.5rem;padding:.6rem .8rem;margin:0 0 1rem;text-align:left}
+.card__send{margin:1.4rem 0 .6rem}
+.card .btn[disabled]{opacity:.6;cursor:wait}
+.card--done[hidden]{display:none}
+.section__body .card p.card__done-msg{font-family:var(--serif);font-size:var(--step-1);margin:1rem 0 0}
+.section__body .card p.card__note{font-family:var(--sans);font-size:var(--step--1);color:var(--sea-soft);line-height:1.5;margin:0}
+.hero__foot{display:flex;flex-wrap:wrap;gap:.8rem 1.8rem}
+@media (prefers-reduced-motion:reduce){.card__choice input::before{transition:none}}
+
 /* FAQ */
 .faq details{border-bottom:1px solid var(--line)}
 .faq details:first-child{border-top:1px solid var(--line)}
@@ -243,6 +279,7 @@ main{padding:0 var(--gutter)}
 
   <div class="hero__foot">
     <a href="#programme">Voir le programme</a>
+    <a href="#rsvp">Répondre à l’invitation</a>
   </div>
 </header>
 
@@ -250,6 +287,7 @@ main{padding:0 var(--gutter)}
   <ul>
     <li><a href="#mot">Le mot des mariés</a></li>
     <li><a href="#programme">Programme</a></li>
+    <li><a href="#rsvp">Répondre</a></li>
     <li><a href="#ile">L’île du Levant</a></li>
     <li><a href="#venir">Comment venir</a></li>
     <li><a href="#dormir">Où dormir</a></li>
@@ -312,6 +350,108 @@ main{padding:0 var(--gutter)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
           Ajouter à mon agenda
         </button>
+      </div>
+    </div>
+  </section>
+
+<!-- ===================== RSVP ===================== -->
+  <section class="section" id="rsvp">
+    <h2>Répondre</h2>
+    <div class="section__body">
+      <form class="card" id="rsvp-form" novalidate>
+        <p class="card__title">Carton réponse</p>
+        <p class="card__sub">Mariage de Jérôme &amp; Yohann · 10 avril 2027</p>
+
+        <p class="card__line">
+          <label class="sr-only" for="rsvp-civ">Civilité</label>
+          <select id="rsvp-civ" name="civ" required>
+            <option value="" selected disabled>Civilité…</option>
+              <option>Madame</option>
+              <option>Monsieur</option>
+              <option disabled>Mademoiselle</option>
+              <option>Monsieur &amp; Madame</option>
+              <option>Madame &amp; Monsieur</option>
+              <option>Monsieur &amp; Monsieur</option>
+              <option>Madame &amp; Madame</option>
+              <option>Monsieur &amp; Monsieur &amp; Monsieur</option>
+              <option>Son altesse sérénissime</option>
+              <option>Je refuse de divulguer mon genre et statut marital</option>
+          </select>
+          <label class="sr-only" for="rsvp-nom">Nom</label>
+          <input id="rsvp-nom" name="nom" type="text" required autocomplete="name" placeholder="votre ou vos noms">
+        </p>
+
+        <fieldset class="card__choice">
+          <legend class="sr-only">Votre réponse</legend>
+          <label><input type="radio" name="venue" value="oui" required> avons le plaisir de vous confirmer notre présence à votre fête de mariage.</label>
+          <label><input type="radio" name="venue" value="non"> avons le regret de vous annoncer que nous ne pourrons pas être présents.</label>
+        </fieldset>
+
+        <div class="card__details" id="rsvp-details">
+          <p class="card__line">Nous serons
+            <label class="sr-only" for="rsvp-adultes">Nombre d’adultes</label>
+            <select id="rsvp-adultes" name="adultes" class="num">
+                <option>0</option>
+                <option selected>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+            adulte(s) et
+            <label class="sr-only" for="rsvp-enfants">Nombre d’enfants</label>
+            <select id="rsvp-enfants" name="enfants" class="num">
+                <option selected>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+            </select>
+            être(s) humain(s) non majeur(s).
+          </p>
+          <p class="card__line">Parmi nous, une personne suit un régime
+            <label class="sr-only" for="rsvp-regime">Régime alimentaire</label>
+            <select id="rsvp-regime" name="regime">
+              <option value="" selected>… aucun en particulier</option>
+                <option>végétarien</option>
+                <option>végan</option>
+                <option>sans gluten</option>
+                <option>11e arrondissement (flexitarien, pas trop de gluten, casse-couille)</option>
+                <option>paléo (comme les chasseurs-cueilleurs de l’ère paléolithique)</option>
+                <option>super protéiné (pour parfaire mon summer body)</option>
+                <option>halal</option>
+                <option>casher</option>
+            </select>
+          </p>
+        </div>
+
+        <p class="card__line card__line--block">
+          <label for="rsvp-mot">Petit commentaire</label>
+          <textarea id="rsvp-mot" name="mot" rows="3" placeholder="Un mot pour les mariés, une question, une chanson pour le karaoké…"></textarea>
+        </p>
+
+        <p class="sr-only" aria-hidden="true"><label>Ne pas remplir <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></p>
+        <p class="card__error" id="rsvp-error" role="alert" hidden></p>
+        <p class="card__send">
+          <button class="btn" type="submit">Envoyer ma réponse</button>
+        </p>
+        <p class="card__note">Votre réponse part directement chez les mariés.</p>
+      </form>
+      <div class="card card--done" id="rsvp-done" hidden tabindex="-1">
+        <p class="card__title">Merci&nbsp;!</p>
+        <p class="card__done-msg" id="rsvp-done-msg"></p>
+        <p class="card__send"><button class="btn" type="button" id="rsvp-again">Envoyer une autre réponse</button></p>
       </div>
     </div>
   </section>
@@ -667,6 +807,71 @@ main{padding:0 var(--gutter)}
     }, {rootMargin:'-45% 0px -50% 0px'});
     document.querySelectorAll('main .section').forEach(function(s){ io.observe(s); });
   }
+  // Carton réponse : envoi direct aux mariés (relais FormSubmit, sans serveur)
+  var RSVP_EMAIL = 'maisonno@google.com'; // ← adresse qui reçoit les réponses (ou l'alias FormSubmit)
+  var form = document.getElementById('rsvp-form');
+  var details = document.getElementById('rsvp-details');
+  var err = document.getElementById('rsvp-error');
+  var done = document.getElementById('rsvp-done');
+  var btn = form.querySelector('button[type="submit"]');
+  function syncDetails(){
+    var v = form.querySelector('input[name="venue"]:checked');
+    details.hidden = !!(v && v.value === 'non');
+  }
+  form.querySelectorAll('input[name="venue"]').forEach(function(r){ r.addEventListener('change', syncDetails); });
+  function showError(msg){ err.textContent = msg; err.hidden = false; }
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if (form._honey.value) return; // robot
+    var civ = form.civ.value, nom = form.nom.value.trim();
+    var v = form.querySelector('input[name="venue"]:checked');
+    var manque = [];
+    if (!civ) manque.push('la civilité');
+    if (!nom) manque.push('votre nom');
+    if (!v) manque.push('votre réponse (présents ou pas)');
+    if (manque.length) {
+      showError('Il manque ' + manque.join(', ') + '.');
+      (!civ ? form.civ : !nom ? form.nom : form.querySelector('input[name="venue"]')).focus();
+      return;
+    }
+    err.hidden = true;
+    var oui = v.value === 'oui';
+    var data = {
+      '_subject': 'RSVP mariage Jérôme & Yohann : ' + nom + (oui ? ' (présent)' : ' (absent)'),
+      '_template': 'table',
+      'Civilité': civ,
+      'Nom': nom,
+      'Réponse': oui ? 'avons le plaisir de vous confirmer notre présence à votre fête de mariage.'
+                     : 'avons le regret de vous annoncer que nous ne pourrons pas être présents.'
+    };
+    if (oui) {
+      data['Adultes'] = form.adultes.value;
+      data['Êtres humains non majeurs'] = form.enfants.value;
+      data['Régime'] = form.regime.value || 'aucun en particulier';
+    }
+    var mot = form.mot.value.trim();
+    if (mot) data['Petit commentaire'] = mot;
+
+    btn.disabled = true; btn.textContent = 'Envoi en cours…';
+    fetch('https://formsubmit.co/ajax/' + RSVP_EMAIL, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify(data)
+    }).then(function(r){ return r.json().then(function(j){ if (!r.ok || String(j.success) !== 'true') throw new Error(j.message || 'refus'); }); })
+    .then(function(){
+      document.getElementById('rsvp-done-msg').textContent = oui
+        ? 'Votre réponse est bien arrivée. Rendez-vous sur l’île du Levant le 10 avril !'
+        : 'Votre réponse est bien arrivée. Vous allez nous manquer !';
+      form.hidden = true; done.hidden = false; done.focus();
+    })
+    .catch(function(){
+      showError('L’envoi n’a pas marché. Vérifiez votre connexion et réessayez, ou appelez l’un des contacts pratiques plus bas.');
+    })
+    .then(function(){ btn.disabled = false; btn.textContent = 'Envoyer ma réponse'; });
+  });
+  document.getElementById('rsvp-again').addEventListener('click', function(){
+    form.reset(); syncDetails(); done.hidden = true; form.hidden = false; form.civ.focus();
+  });
 })();
 </script>
 </body>

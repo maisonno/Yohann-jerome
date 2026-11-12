@@ -18,3 +18,10 @@ Cloudflare Pages, connecté à ce dépôt :
 - Framework preset : None
 - Build command : (vide)
 - Build output directory : `/`
+
+## Carton réponse (RSVP)
+
+Les réponses sont envoyées par mail via FormSubmit (formsubmit.co), sans serveur.
+L'adresse de destination est la variable `RSVP_EMAIL` dans le script en bas de `index.html`.
+La toute première réponse déclenche un mail d'activation de FormSubmit à cette adresse : il faut cliquer sur le lien pour activer.
+Après activation, FormSubmit fournit un alias (chaîne aléatoire) à mettre à la place de l'adresse, pour ne pas l'exposer dans le code.
