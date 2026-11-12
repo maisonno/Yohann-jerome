@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jérôme &amp; Yohann · 9 et 10 avril 2027 · Île du Levant</title>
-<meta name="description" content="Le mariage de Jérôme et Yohann, les 9 et 10 avril 2027 sur l'île du Levant : programme, accès, hébergements et questions pratiques.">
+<title>Jérôme &amp; Yohann · 10 avril 2027 · Île du Levant</title>
+<meta name="description" content="Le mariage de Jérôme et Yohann, le 10 avril 2027 sur l'île du Levant : programme, accès, hébergements et questions pratiques.">
 <meta name="theme-color" content="#13306A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2313306A'/%3E%3Ccircle cx='32' cy='38' r='16' fill='%23F4C430'/%3E%3Cpath d='M0 40 Q16 30 30 34 T64 36 V64 H0Z' fill='%232E5B45'/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/fraunces-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -182,6 +182,24 @@ main{padding:0 var(--gutter)}
 .stay__links a{font-weight:500}
 .stay--todo{background:transparent;border-style:dashed;justify-content:center;min-height:8rem}
 
+
+/* Thème de la cérémonie */
+.theme{margin-top:2.6rem;padding:1.4rem 1.5rem;border-radius:1rem;background:var(--sea);color:var(--chalk)}
+.theme h3{font-family:var(--serif);font-weight:600;font-size:var(--step-2);line-height:1.1;margin:0 0 .8rem;color:var(--genet)}
+.section__body .theme p{font-family:var(--sans);font-size:var(--step-0);line-height:1.6;margin:0 0 .7em}
+.section__body .theme p.theme__lead{font-family:var(--serif);font-size:var(--step-1);line-height:1.4}
+.section__body .theme p:last-child{margin-bottom:0}
+
+/* Contacts pratiques */
+.contacts{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:0}
+.contacts li{padding:1.1rem 0;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:.15rem 1rem;align-items:baseline}
+.contacts li:last-child{border-bottom:1px solid var(--line)}
+.section__body .contacts p{margin:0;font-family:var(--sans);font-size:var(--step-0);line-height:1.4}
+.section__body .contacts .contact__name{font-family:var(--serif);font-size:var(--step-1);font-weight:600}
+.section__body .contacts .contact__role{grid-column:1;color:var(--sea-soft);font-size:var(--step--1)}
+.contact__tel{grid-column:2;grid-row:1 / span 2;align-self:center;font-weight:500;white-space:nowrap}
+@media (max-width:480px){.contacts li{grid-template-columns:1fr}.contact__tel{grid-column:1;grid-row:auto;margin-top:.35rem}}
+
 /* FAQ */
 .faq details{border-bottom:1px solid var(--line)}
 .faq details:first-child{border-top:1px solid var(--line)}
@@ -212,7 +230,7 @@ main{padding:0 var(--gutter)}
 <header class="hero" id="haut">
   <div class="hero__text">
     <h1>Jérôme <span class="amp">&amp;</span> Yohann</h1>
-    <p class="hero__date">se marient les 9&nbsp;et&nbsp;10&nbsp;avril&nbsp;2027 sur l’île du Levant</p>
+    <p class="hero__date">se marient le 10&nbsp;avril&nbsp;2027 sur l’île du Levant</p>
     <p class="hero__count" id="countdown" hidden></p>
   </div>
 
@@ -244,6 +262,7 @@ main{padding:0 var(--gutter)}
     <li><a href="#venir">Comment venir</a></li>
     <li><a href="#dormir">Où dormir</a></li>
     <li><a href="#faq">Questions</a></li>
+    <li><a href="#contacts">Contacts</a></li>
   </ul>
 </nav>
 
@@ -253,8 +272,9 @@ main{padding:0 var(--gutter)}
   <section class="section intro" id="mot">
     <h2>Le mot des mariés</h2>
     <div class="section__body">
-      <p>On a dit oui. Et comme on ne fait jamais les choses à moitié, on vous embarque pour deux jours sur une île à part, avec un karaoké, une cérémonie face à la mer et une soirée qui finira tard.</p>
-      <p>Ce site rassemble tout ce qu’il faut savoir : le programme, comment arriver jusqu’ici (oui, il y a un bateau à prendre), où dormir, et les réponses aux questions que vous n’osez pas poser.</p>
+      <p>On a dit oui&nbsp;! Et comme on ne fait jamais les choses à moitié, on vous embarque pour deux jours sur l’île du Levant, si chère à nos cœurs, pour célébrer notre union. (Libre à vous de rester plus longtemps…)</p>
+      <p>Nous serions ravis de vous avoir à nos côtés&nbsp;!</p>
+      <p>Ce site rassemble tout ce qu’il faut savoir&nbsp;: le programme, comment arriver jusqu’ici (oui, il y a un bateau à prendre), où dormir, et les réponses aux questions que vous n’osez pas poser.</p>
       <p class="signature">Jérôme et Yohann</p>
     </div>
   </section>
@@ -284,6 +304,12 @@ main{padding:0 var(--gutter)}
           <li><time datetime="2027-04-10T22:00">22h</time>
             <div><span class="what">Soirée dansante</span><span class="where">Jusqu’au bout de la nuit</span></div></li>
         </ol>
+      </div>
+
+      <div class="theme" id="theme">
+        <h3>Le thème de la cérémonie</h3>
+        <p class="theme__lead">Ras le bol des thèmes&nbsp;: faites-vous plaisir, choisissez votre propre thème&nbsp;! (Seul ou à plusieurs)</p>
+        <p>Une robe de princesse, un déguisement de Marsupilami ou votre look de tektonik de 2007&nbsp;? Tant que vous êtes contents, c’est le plus important&nbsp;! Il faudra juste pouvoir le justifier auprès des autres convives (ex.&nbsp;: «&nbsp;oui oui, j’ai toujours aimé les serre-têtes et les mocassins à gland&nbsp;»).</p>
       </div>
 
       <div class="cal">
@@ -338,7 +364,7 @@ main{padding:0 var(--gutter)}
 
       <div class="sub" id="deplacer">
         <h3>Se déplacer sur l’île</h3>
-        <p>L’île est très pentue. La Pomme d’Adam, notre bar-restaurant, se trouve sur la place du village, à 120&nbsp;mètres au-dessus du niveau de la mer. Le port est, très classiquement, au niveau de la mer. Il y a un bon quart d’heure de grimpette pour monter à la place.</p>
+        <p>L’île est très pentue. La Pomme d’Adam se trouve sur la place du village, à 120&nbsp;mètres au-dessus du niveau de la mer. Le port est, très classiquement, au niveau de la mer. Il y a un bon quart d’heure de grimpette pour monter à la place.</p>
         <p>Les festivités se dérouleront en haut, autour de la place. On vous recommande de ne pas vous loger trop bas, sauf si vous avez envie de vous muscler les cuisses.</p>
         <dl class="services">
           <div><dt>Taxi</dt><dd>Pour celles et ceux qui ne veulent pas grimper à pied&nbsp;: 10&nbsp;€ par personne, quelle que soit la destination.<br><a href="tel:+33617903541">Gaël&nbsp;: 06&nbsp;17&nbsp;90&nbsp;35&nbsp;41</a></dd></div>
@@ -567,11 +593,36 @@ main{padding:0 var(--gutter)}
     </div>
   </section>
 
+  <!-- ===================== CONTACTS PRATIQUES ===================== -->
+  <section class="section" id="contacts">
+    <h2>Contacts pratiques</h2>
+    <div class="section__body">
+      <p class="small">Une question, un bateau raté, un doute sur votre thème&nbsp;? Appelez&nbsp;:</p>
+      <ul class="contacts">
+        <li>
+          <p class="contact__name">Jérémy Lavéant</p>
+          <p class="contact__role">Frère et témoin de Yohann</p>
+          <a class="contact__tel" href="tel:+33647950696">06&nbsp;47&nbsp;95&nbsp;06&nbsp;96</a>
+        </li>
+        <li>
+          <p class="contact__name">Anne Mourot</p>
+          <p class="contact__role">Amie et experte du Levant</p>
+          <a class="contact__tel" href="tel:+33686168736">06&nbsp;86&nbsp;16&nbsp;87&nbsp;36</a>
+        </li>
+        <li>
+          <p class="contact__name">Olivier Maisonneuve</p>
+          <p class="contact__role">Ami et patron de La Pomme d’Adam</p>
+          <a class="contact__tel" href="tel:+33683225925">06&nbsp;83&nbsp;22&nbsp;59&nbsp;25</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
   <p class="names">Jérôme <em>&amp;</em> Yohann</p>
-  <p class="small">Île du Levant, 9 et 10 avril 2027</p>
+  <p class="small">Île du Levant, 10 avril 2027</p>
 </footer>
 
 <script>
